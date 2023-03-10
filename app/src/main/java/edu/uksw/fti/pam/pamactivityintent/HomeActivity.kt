@@ -24,6 +24,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import edu.uksw.fti.pam.pamactivityintent.models.GroupViewModel
+import edu.uksw.fti.pam.pamactivityintent.models.TodosViewModel
 import edu.uksw.fti.pam.pamactivityintent.ui.screens.BottomNavigationMainScreenView
 import edu.uksw.fti.pam.pamactivityintent.ui.screens.HomeField
 import edu.uksw.fti.pam.pamactivityintent.ui.theme.PAMActivityIntentTheme
@@ -31,6 +33,8 @@ import edu.uksw.fti.pam.pamactivityintent.ui.theme.PAMActivityIntentTheme
 class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val vm = TodosViewModel()
+        val vm2 = GroupViewModel()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 

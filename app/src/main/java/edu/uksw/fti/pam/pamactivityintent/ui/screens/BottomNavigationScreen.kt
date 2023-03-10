@@ -22,6 +22,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import edu.uksw.fti.pam.pamactivityintent.R
+import edu.uksw.fti.pam.pamactivityintent.models.GroupViewModel
+import edu.uksw.fti.pam.pamactivityintent.models.TodosViewModel
 import edu.uksw.fti.pam.pamactivityintent.ui.BottomNavItems
 
 @Composable
@@ -32,8 +34,10 @@ fun NavigationGraph(
         navController = navController,
         startDestination = BottomNavItems.Home.screen_route
     ) {
+        val vm = TodosViewModel()
+        val vm2 = GroupViewModel()
         composable(BottomNavItems.Home.screen_route) {
-            HomeField()
+            HomeField(vm,vm2)
         }
         composable(BottomNavItems.Contact.screen_route) {
             ContactScreen()
