@@ -1,1 +1,1 @@
-Project aplikasi mobile chatting menguunakan kotlin dan firebase
+Project aplikasi mobile chatting mengunakan kotlin dan firebase
